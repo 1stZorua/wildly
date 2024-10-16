@@ -5,19 +5,19 @@ interface Link {
 
 export const links: Array<Link> = [
     {
-        name: 'Home',
-        href: '/'
+        name: "Home",
+        href: "/"
     },
     {
-        name: 'Features',
-        href: '/#'
+        name: "Features",
+        href: "/#"
     },
     {
-        name: 'About',
-        href: '/#'
+        name: "About",
+        href: "/#"
     },
     {
-        name: 'Contact',
-        href: '/#'
+        name: "Contact",
+        href: "/#"
     }
 ];
