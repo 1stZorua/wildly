@@ -2,16 +2,20 @@
 	import type { ClassType } from "$components/_types";
 	import type { Snippet } from "svelte";
 	import Button from "./Button.svelte";
+    import type { HTMLButtonAttributes } from "svelte/elements";
+
+    interface Props extends HTMLButtonAttributes {
+        className?: ClassType;
+        children?: Snippet;
+    }
 
     let { 
         className, 
-        children 
-    }: { className?: ClassType, children?: Snippet } = $props();
+        children,
+        ...rest
+    }: Props = $props();
 </script>
 
-<Button
-    {className}
-    props={{ variant: 'secondary' }}
->
+<Button {...rest} {className} props={{ variant: "secondary" }}>
     {@render children?.()}
 </Button>
