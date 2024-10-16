@@ -9,9 +9,6 @@
     }: { className?: ClassType, children?: Snippet } = $props();
 </script>
 
-<Text
-    {className}
-    props={{ size: 'lg', weight: 'bold' }}
->
+<Text {className} props={{ size: "lg" }}>
     {@render children?.()}
 </Text>

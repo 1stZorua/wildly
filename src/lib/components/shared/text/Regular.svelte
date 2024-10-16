@@ -9,8 +9,6 @@
     }: { className?: ClassType, children?: Snippet } = $props();
 </script>
 
-<Text
-    {className}
->
+<Text {className}>
     {@render children?.()}
 </Text>
