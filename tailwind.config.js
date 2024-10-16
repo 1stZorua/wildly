@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			borderRadius: {
+				md: '1rem',
+				lg: '1.25rem',
+				xl: '2.5rem'
+			},
 			colors: {
 				light: {
 					btn: {
@@ -16,7 +22,7 @@ export default {
 							background: '#204A5A',
 							hover: ''
 						},
-						tertiary: {
+						action: {
 							color: '#204A5A',
 							background: '#FFFFFF',
 							hover: ''
@@ -38,6 +44,10 @@ export default {
 					},
 					separator: '#F2F2F2',
 					background: {
+						white: {
+							light: '#FFFFFF',
+							dark: '#000000'
+						},
 						primary: {
 							light: '#D1E9F3',
 							dark: ''
@@ -49,6 +59,10 @@ export default {
 						tertiary: {
 							light: '#2F6073',
 							dark: '#204A5A'
+						},
+						quaternary: {
+							light: '#F2EEE3',
+							dark: ''
 						}
 					}
 				}
@@ -59,17 +73,23 @@ export default {
 			}
 		},
 		fontSize: {
-			xs: 'clamp(0.25rem, 3.5vw, 0.5rem)',
-			sm: 'clamp(0.75rem, 3.5vw, 1rem)',
-			base: 'clamp(1rem, 3.5vw, 1.25rem)',
-			lg: 'clamp(1.375rem, 4vw, 2.25rem)',
-			xl: 'clamp(1.5rem, 4vw, 2.5rem)'
+			xs: 'clamp(0.25rem, 3vw, 0.5rem)',
+			sm: 'clamp(0.75rem, 3vw, 1rem)',
+			base: 'clamp(1rem, 3vw, 1.25rem)',
+			md: 'clamp(1.125rem, 3vw, 1.5rem)',
+			lg: 'clamp(1.125rem, 4vw, 2rem)',
+			xl: 'clamp(1.5rem, 4vw, 2.25rem)',
+			heading: 'clamp(1.75rem, 4vw, 4rem)',
+			hero: 'clamp(2rem, 5vw, 6rem)',
+			mega: 'clamp(12rem, 30vw, 25rem)'
 		},
 		screens: {
 			sm: { max: '576px' },
 			md: { max: '768px' },
 			lg: { max: '1024px' },
-			xl: { max: '1280px' }
+			xl: { max: '1280px' },
+			'2xl': { max: '1440px' },
+			'3xl': { max: '1600px' }
 		}
 	},
 	plugins: []
