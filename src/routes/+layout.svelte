@@ -1,18 +1,16 @@
 <script lang=ts>
-    import Header from '$components/layout/Header/Header.svelte';
-    import type { Snippet } from 'svelte';
-    import '../app.css';
+    import { Header, Footer } from "$components/layout";
+    import type { Snippet } from "svelte";
+    import "iconify-icon";
+    import "../app.css";
     
     let { 
         children 
-    }: { children: Snippet } = $props();
+    }: { children?: Snippet } = $props();
 </script>
 
-<div class="
-    px-16 py-8
-">
+<div class="flex flex-col gap-16 pt-8 max-w-[120rem] m-auto lg:pt-4">
     <Header></Header>
-    {#if children}
-        {@render children()}
-    {/if}
+    {@render children?.()}
+    <Footer></Footer>
 </div>
