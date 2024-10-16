@@ -10,10 +10,10 @@
 
 <section class="wrapper flex 3xl:bg-light-background-tertiary-dark 3xl:items-center 3xl:p-0">
     <div class="flex flex-col justify-center relative gap-40 w-full before:absolute before:w-screen before:h-full before:bg-light-background-tertiary-dark before:-translate-x-[50vw] before:-z-10 3xl:gap-20 3xl:wrapper 3xl:py-16">
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-1 lg:gap-4">
             <div class="flex -mb-4 text-light-background-secondary-light">
                 <Text props={{ family: "secondary", size: "lg" }}>{activeStepIndex + 1}</Text>
-                <Text props={{ family: "secondary", size: "sm", weight: "bold" }} className="mt-[0.5%]">{activeStepIndex == 0 ? "ST" : activeStepIndex == 1 ? "ND" : "TH"}</Text>
+                <Text props={{ family: "secondary", size: "sm", weight: "bold" }} className="mt-1">{activeStepIndex == 0 ? "ST" : activeStepIndex == 1 ? "ND" : "TH"}</Text>
                 <Text props={{ family: "secondary", size: "lg" }} className="ml-2">STEP</Text>
             </div>
             <div class="flex flex-col gap-2 text-light-text-secondary max-w-[80%] z-10 3xl:max-w-full">
