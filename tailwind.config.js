@@ -4,6 +4,18 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			animation: {
+				loading: 'loading 1s linear infinite'
+			},
+			keyframes: {
+				loading: {
+					'0%': { backgroundPosition: '100% 0' },
+					'100%': { backgroundPosition: '-100% 0' }
+				}
+			},
+			backgroundImage: {
+				skeleton: 'linear-gradient(90deg, #D1E9F3 25%, #B0D4E1 50%, #D1E9F3 75%);'
+			},
 			borderRadius: {
 				md: '1rem',
 				lg: '1.25rem',
