@@ -4,6 +4,8 @@
 	import { Icon } from "$components/shared/other";
     import { Dark, Light } from "$images/logo/index";
     import { links } from "./config";
+
+    // let currentPage = $derived($page.url.pathname.split('/').pop() || 'index')
 </script>
 
 {#snippet link(href: string, name: string)}
@@ -16,6 +18,7 @@
     <div class="flex items-center gap-16">
         <img class="hidden lg:block" src={Light} alt="logo"/>
         <img class="block lg:hidden" src={Dark} alt="logo"/>
+  
         <ul class="flex gap-8 xl:hidden">
             {#each links as l}
                 <li>{@render link(l.href, l.name)}</li>
