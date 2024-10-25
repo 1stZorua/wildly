@@ -10,7 +10,7 @@ export const links: Array<Link> = [
     },
     {
         name: "Features",
-        href: "/#"
+        href: "/scan"
     },
     {
         name: "About",
