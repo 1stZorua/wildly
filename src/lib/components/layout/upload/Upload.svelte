@@ -94,7 +94,7 @@
                         </div> 
                         <div class="w-full h-1 bg-light-separator rounded-full"></div>
                         <div in:fade class="flex flex-col">
-                            <TextLarge>The image you scanned looks {confidence}% like a {predictedBreed}.</TextLarge>
+                            <TextLarge>The image you scanned looks {confidence}% like {['a', 'e', 'i', 'o', 'u'].includes(predictedBreed[0].toLowerCase()) ? 'an' : 'a'} {predictedBreed}.</TextLarge>
                             {#if isDrawerOpen}
                                 <div transition:slide class="flex flex-col gap-6 relative mt-6 p-8 bg-light-separator rounded-lg lg:p-0 lg:bg-transparent">
                                     {#each top as { breed, confidence }}
