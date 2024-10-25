@@ -7,30 +7,32 @@
     import { sections, links } from "./config";
 </script>
 
-<section class="wrapper flex gap-32 bg-light-background-white-dark z-0 3xl:gap-0 3xl:flex-col-reverse 3xl:p-0">
-    <div class="flex flex-col gap-[8.25rem] w-full pt-12 pb-12 text-light-text-gray-light relative before:absolute before:w-screen before:h-full before:bg-light-background-white-dark before:-translate-x-[50vw] before:-z-20 before:top-0 3xl:wrapper 3xl:pb-8">
-        <div class="flex justify-between items-center lg:flex-col lg:items-start">
-            <img class="self-start w-48 lg:w-36" src={Light} alt="logo"/>
-            <TextBase className="max-w-[60%] mt-2 3xl:mx-auto lg:!m-0 lg:max-w-full">
-                Your go-to app for discovering and learning about dog breeds through innovative scanning technology.
-            </TextBase>
-        </div>
-        <div class="flex justify-between gap-16 flex-wrap sm:justify-normal">
-            {#each sections as section}
-                <div class="flex flex-col gap-2">
-                    <Text className="text-light-text-secondary" props={{ size: "md", weight: "bold" }}>{section.title}</Text>
-                    <div class="flex flex-col">
-                        {#each section.contents as content }
-                            <TextBase>{content}</TextBase>
-                        {/each}
+<section class="wrapper flex bg-light-background-white-dark z-0 3xl:gap-0 3xl:flex-col-reverse 3xl:p-0">
+    <div class=" w-full text-light-text-gray-light relative before:absolute before:w-screen before:h-full before:bg-light-background-white-dark before:-translate-x-[50vw] before:-z-20 before:top-0">
+        <div class="flex flex-col gap-[8.25rem] h-full py-12 pr-40  3xl:wrapper 3xl:pb-8">
+            <div class="flex justify-between items-center lg:flex-col lg:items-start">
+                <img class="self-start w-48 lg:w-36" src={Light} alt="logo"/>
+                <TextBase className="max-w-[60%] mt-2 3xl:mx-auto lg:!m-0 lg:max-w-full">
+                    Your go-to app for discovering and learning about dog breeds through innovative scanning technology.
+                </TextBase>
+            </div>
+            <div class="flex justify-between gap-16 flex-wrap sm:justify-normal">
+                {#each sections as section}
+                    <div class="flex flex-col gap-2">
+                        <Text className="text-light-text-secondary" props={{ size: "md", weight: "bold" }}>{section.title}</Text>
+                        <div class="flex flex-col">
+                            {#each section.contents as content }
+                                <TextBase>{content}</TextBase>
+                            {/each}
+                        </div>
                     </div>
-                </div>
-            {/each}
-        </div>
-        <div class="flex justify-between flex-wrap gap-4 text-light-text-secondary mt-auto sm:justify-normal">
-            {#each links as link}
-                <Text props={{ weight: "light" }}>{@html link}</Text>
-            {/each}
+                {/each}
+            </div>
+            <div class="flex justify-between flex-wrap gap-4 text-light-text-secondary mt-auto sm:justify-normal">
+                {#each links as link}
+                    <Text props={{ weight: "light" }}>{@html link}</Text>
+                {/each}
+            </div>
         </div>
     </div>
     <div class="flex flex-col items-end gap-3 w-full pt-12 relative before:absolute before:w-screen before:h-full before:bg-light-background-secondary-light before:-z-10 before:top-0 before:left-0 3xl:items-start 3xl:wrapper 3xl:pb-16">
