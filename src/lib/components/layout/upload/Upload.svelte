@@ -44,15 +44,15 @@
 
 <section class="wrapper flex relative justify-between h-full lg:h-[40rem] lg:p-0 md:!h-screen md:-mb-[12.5rem] md:!pb-[12.5rem]">
     <img class="h-full 3xl:hidden" src={ScanPlantLeft} alt="plant"/>
-    <div class="absolute -top-[8.5rem] left-0 -z-10 w-full h-[calc(100%+12.5rem)] hidden overflow-hidden lg:block md:!h-[100%]">
+    <div class="absolute -top-[8.5rem] left-0 -z-10 w-full h-[calc(100%+12.5rem)] hidden overflow-hidden lg:block md:!h-full">
         <div class="absolute left-0 z-10 w-full h-full bg-black opacity-30"></div>
         <img class="h-full w-full object-cover" src={imageUrl ? imageUrl : Forest} alt="dog"/>
     </div>
     <form method="post" action="?/upload" enctype="multipart/form-data" bind:this={elForm} class="w-full relative flex flex-col items-center justify-center" use:enhance>
         <input bind:this={fileInput} type="file" class="hidden" name="image" accept="image/*" required onchange={uploadImage}>
-        <div class="h-[40rem] relative w-full overflow-hidden lg:overflow-visible lg:h-full">
+        <div class="h-[40rem] relative w-full overflow-hidden drop-shadow-xl {imageUrl ? 'rounded-b-lg' : ''} lg:overflow-visible lg:h-full">
             {#if imageUrl}
-                <img transition:fade class="absolute w-full h-full -z-10 rounded-xl lg:hidden" src={imageUrl} alt="dog"/>
+                <img transition:fade class="absolute w-full h-full -z-10 rounded-t-lg lg:hidden" src={imageUrl} alt="dog"/>
             {/if}
 
             {#if !imageUrl}
