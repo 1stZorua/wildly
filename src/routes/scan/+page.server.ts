@@ -26,8 +26,6 @@ export const actions = {
                 await new Promise(resolve => setTimeout(resolve, MINIMUM_DELAY_MS - elapsedTime));
             }
 
-            console.log(result);
-
             setFlash({ type: 'success', message: `Prediction successful.`}, cookies);
             return { success: true, predictedBreed: result['predicted_breed'], confidence: result['confidence'], top: result['top_3'] }
         } catch (error: unknown) {
