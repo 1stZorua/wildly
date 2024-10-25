@@ -8,6 +8,8 @@
 	import { fade, fly, slide } from "svelte/transition";
     import { Forest } from "$images/dogs";
     import type { UploadData } from "$lib/types/types";
+	import { getFlash } from "sveltekit-flash-message";
+	import { page } from "$app/stores";
 
     let { 
         form 
@@ -22,6 +24,8 @@
     let confidence: number = $derived(form?.confidence);
     let top: Array<{ breed: string; confidence: number}> = $derived(form?.top);
 
+    const flash = getFlash(page);
+
     function uploadImage(e: Event) {
         const files = (e.target as HTMLInputElement)?.files;
         if (!(files && files.length > 0))
@@ -29,6 +33,8 @@
 
         form = { ...form, predictedBreed: null };
         isDrawerOpen = false;
+
+        $flash = { type: 'loading', message: 'Scanning image...' };
 
         const reader = new FileReader();
         reader.onload = () => {
