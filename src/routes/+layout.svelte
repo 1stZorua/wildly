@@ -17,6 +17,9 @@
             case "error":
                 toast.error($flash.message);
                 break;
+            case "loading":
+                toast.loading($flash.message);
+                break;
         }
     })
 
