@@ -58,7 +58,7 @@
         <input bind:this={fileInput} type="file" class="hidden" name="image" accept="image/*" required onchange={uploadImage}>
         <div class="h-[40rem] relative w-full overflow-hidden drop-shadow-xl {imageUrl ? 'rounded-b-lg' : ''} lg:overflow-visible lg:h-full">
             {#if imageUrl}
-                <img transition:fade class="absolute w-full h-full -z-10 rounded-t-lg lg:hidden" src={imageUrl} alt="dog"/>
+                <img transition:fade class="absolute w-full h-full -z-10 rounded-t-lg object-cover lg:hidden" src={imageUrl} alt="dog"/>
             {/if}
 
             {#if !imageUrl}
