@@ -19,7 +19,7 @@
             <TextHero className="text-balance leading-[100%]">Find your pets' true nature</TextHero>
             <TextMedium className="-mt-2 md:text-pretty 3xl:max-w-[80%] xl:!max-w-full">Get to know your pet better with the use of AI technology, by downloading the app below.</TextMedium>
         </div>
-        <ButtonSecondary className="flex items-center justify-center gap-4 !max-w-fit">
+        <ButtonSecondary href="scan" className="flex items-center justify-center gap-4 !max-w-fit">
             <Icon icon="lucide:download"></Icon>
             <TextBase>Download now</TextBase>
         </ButtonSecondary>
@@ -40,7 +40,7 @@
         <div class="relative bg-light-background-secondary-light w-[40rem] h-[44rem] rounded-t-lg overflow-hidden 3xl:mr-24 3xl:-z-10">
             <img class="absolute bottom-0 left-1/2 -translate-x-1/2 object-cover 3xl:min-h-[80%] 3xl:opacity-50" src={Happy} alt="dog"/>
             <div class="flex justify-between relative h-full p-5">
-                <ButtonAction className="flex">
+                <ButtonAction className="flex h-max">
                     <Icon icon="lucide:scan-line"></Icon>
                 </ButtonAction>
                 <ButtonAction className="flex items-center gap-4 self-end">
