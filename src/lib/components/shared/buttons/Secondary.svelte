@@ -6,16 +6,18 @@
 
     interface Props extends HTMLButtonAttributes {
         className?: ClassType;
+        href?: string;
         children?: Snippet;
     }
 
     let { 
         className, 
+        href,
         children,
         ...rest
     }: Props = $props();
 </script>
 
-<Button {...rest} {className} props={{ variant: "secondary" }}>
+<Button {...rest} {className} {href} props={{ variant: "secondary" }}>
     {@render children?.()}
 </Button>
