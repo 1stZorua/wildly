@@ -1,38 +1,46 @@
-# create-svelte
+# Wildly
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Wildly is a smart application that helps dog owners, veterinarians, and dog shelters quickly identify a dog's breed by scanning a photo.
 
-## Creating a project
+## Figma Design
 
-If you're seeing this, you've probably already done this step. Congrats!
+The design of Wildly prioritizes a clean, intuitive interface for easy dog breed identification. For detailed design elements and prototypes, please refer to the [Figma design](https://www.figma.com/design/peRsT7RJmRIWobyPbFhuko/Wildly?node-id=0-1&t=hVN6FmVQlZs3Yaao-1).
+
+## Packages
+
+- **clsx**
+- **svelte-sonner**
+- **sveltekit-flash-message**
+- **tailwind-merge**
+- **tailwindcss**
+- **tailwind-variants**
+- **typescript**
+
+## Folder Structure
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+src/
+├── lib/
+│   ├── components/      # Reusable UI components
+│   │   ├── layout/      # Layout components (e.g., header, footer)
+│   │   ├── page/        # Page components (e.g., layout, wrapper)
+│   │   └── shared/      # Shared UI components (e.g., buttons, modals)
+│   ├── images/          # Image assets
+│   ├── types/           # TypeScript types/interfaces
+│   └── utils/           # Utility functions and helpers
 ```
 
-## Developing
+## Features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **Breed Identification:** Quickly identify a dog's breed by scanning a photo with the Wildly application.
+
+- **User-Friendly Interface:** Intuitive design to help dog owners, veterinarians, and shelters easily use the app.
+
+- **Backend Integration:** Robust integration with a custom-trained AI model to process images and classify dog breeds.
+
+## Getting Started
 
 ```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
