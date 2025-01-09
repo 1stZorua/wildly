@@ -35,15 +35,9 @@ const textVariants = tv({
 
 type TextVariants = VariantProps<typeof textVariants>;
 
-type Props = {
-    weight?: TextVariants["weight"];
-    size?: TextVariants["size"];
-    family?: TextVariants["family"];
-}
-
 export {
     textVariants,
-    type Props as TextProps
+    type TextVariants as TextProps
 }
 
 export { default as Text } from "./Text.svelte";
